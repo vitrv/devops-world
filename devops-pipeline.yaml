@@ -1,0 +1,19 @@
+# devopsworld - pipline
+
+name: $(date:yyyyMMdd)$(rev:.rr)
+
+stages:
+  - stage: 'build'
+    displayName: 'build-mvc' # string literal
+    jobs: 
+      - jobs:
+        displayName: ''
+        pool:
+          vmImage: 'ubuntu.16-04'
+        steps:
+          - step: 
+            displayName:
+            - script: |
+                echo 'Hello Pipeline'
+
+
