@@ -47,7 +47,7 @@ stages:
   - stage: 'deploy'
     condition: succeeded()
     dependsOn:
-      - test:
+      - test
     displayName: 'deploy-mvc'
     jobs:
       - job:
