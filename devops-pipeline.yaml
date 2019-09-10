@@ -55,14 +55,12 @@ stages:
           - script: |
               echo 'deploy passed...'
 
-
-
-
 trigger:
   branches:
     include:
     - master
 
 variables:
+  - testVar: 'tuesday'
 
 
