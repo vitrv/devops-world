@@ -58,11 +58,11 @@ stages:
 
 
 
-triggers:
-  - branches:
-      include:
-        - master
+trigger:
+  branches:
+    include:
+    - master
 
-variable:
+variables:
 
 
