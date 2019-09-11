@@ -31,7 +31,11 @@ stages:
           vmImage: 'ubuntu-16.04'
         steps:
           - script: |
+              dotnet install --global sonarscanner
+              SonarScanner.MSBuild.exe begin /k:"" /o:"laura" /d:sonar.login="69cacea30ac715bf84e3d6692e6cd8013e486f16" 
+              dotnet build
               dotnet test -p:CollectCoverage=true
+              SonarScanner.MSBuild.exe end /d:sonar.login="69cacea30ac715bf84e3d6692e6cd8013e486f16" 
 
   - stage: 'pack'
     condition: succeeded()
@@ -69,6 +73,6 @@ trigger:
     - master
 
 variables:
-  testVar: 'tuesday'
+  sonar: '69cacea30ac715bf84e3d6692e6cd8013e486f16'
 
 
