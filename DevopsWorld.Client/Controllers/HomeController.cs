@@ -12,7 +12,7 @@ namespace DevopsWorld.Client.Controllers
     {
         public IActionResult Index()
         {
-          return new JsonResult(new {name = "fred"});
+          return View();
         }
 
         public IActionResult Privacy()
