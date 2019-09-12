@@ -64,19 +64,19 @@ stages:
           vmImage: 'ubuntu-16.04'
         steps:
           - task:
-            inputs: Docker@2
-              command: 'login'
-              containerRegistry: 'docker'
-            displayName: docker login
+              inputs: Docker@2
+                command: 'login'
+                containerRegistry: 'docker'
+              displayName: 'docker login'
           - script: |
               docker image build --file Dockerfile --tag devopsworld .
               docker image tag devopsworld lncatano/devopsworld
               docker push
           - task: Docker@2
-            inputs:
-              command: 'logout'
-              containerRegistry: 'docker'
-            displayName: docker login
+              inputs:
+                command: 'logout'
+                containerRegistry: 'docker'
+              displayName: 'docker login'
 
   - stage: 'deploy'
     condition: succeeded()
