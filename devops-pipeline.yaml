@@ -90,10 +90,10 @@ stages:
         pool:
           vmImage: 'ubuntu-16.04'
         steps:
-        - task: AzureWebAppContainer@1
-          inputs:
-            azureSubscription: 'Free Trial(045d809c-824e-4fac-9222-ad8c6a5b6b62)'
-            appName: 'lnc-dvw'
+          - task: AzureWebAppContainer@1
+            inputs:
+              azureSubscription: 'Free Trial(045d809c-824e-4fac-9222-ad8c6a5b6b62)'
+              appName: 'lnc-dvw'
           - script: |
               echo 'working ont'
 
