@@ -95,7 +95,7 @@ stages:
               azureSubscription: 'Free Trial(045d809c-824e-4fac-9222-ad8c6a5b6b62)'
               appName: 'lnc-dvw'
           - script: |
-              echo 'working ont'
+              echo 'working ontttttt@!!!!!!'
 
 trigger:
   branches:
