@@ -3,7 +3,7 @@ WORKDIR /src
 COPY ["DevopsWorld.Client/DevopsWorld.Client.csproj", "DevopsWorld.Client/"]
 RUN dotnet restore "DevopsWorld.Client/DevopsWorld.Client.csproj"
 COPY . .
-WORKDIR "/src/DevopsWorld.Client"
+WORKDIR /src/DevopsWorld.Client
 RUN dotnet build "DevopsWorld.Client.csproj"
 
 FROM buildstage AS publishstage

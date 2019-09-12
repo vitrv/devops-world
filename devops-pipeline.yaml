@@ -69,7 +69,7 @@ stages:
               containerRegistry: 'docker'
             displayName: 'docker login'
           - script: |
-              docker image build --file Dockerfile --tag devopsworld .
+              docker image build --file Dockerfile --tag devopsworld ./
               docker image tag devopsworld lncatano/devopsworld
               docker push lncatano/devopsworld
           - task: Docker@2
